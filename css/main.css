@@ -140,7 +140,7 @@ header nav ul li a{
 }
 
 .menu li {
-	padding: 0.625em 0; /*10px 0*/
+	padding: 10px 0; /*10px 0*/
 	color:#77a466;
 }
 
@@ -175,30 +175,26 @@ footer span {
 @media all and (min-width: 768px) {
 
 	.bottom-section {
-		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 1px solid #eee;
 	}
 
-	.section-one {
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
 	}
-
+	
+	
 	.section-two {
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
-	}
-
-	.section-two h3,
-	.section-three h3 {
 		padding: 0 1.875em; /*10px 30px*/
 
-	}	
-	.menu li {
-		padding-right: 1.4em;
+	}
 
-	}
-	.reviews,
-	.address {
-		padding: 0 1.4em;
-	}
 }
 
 /*===============================================================================
