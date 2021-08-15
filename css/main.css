@@ -12,7 +12,6 @@ body {
 
 .container{
 	max-width: 1200px;
-	margin: 0 auto;
 	width: 90%;
 	display: flex;
 	justify-content: center;
@@ -41,7 +40,10 @@ h3 {
 p {
 	font-size: 0.875em; /*14px*/
 	line-height: 1.313em; /*21px*/
-    padding: 0 1.875em; /*0 30px*/
+}
+
+ul {
+	margin: 0;
 }
 
 /*The widths are in a percentage!*/
@@ -53,7 +55,6 @@ header {
 }
 
 header h1 {
-	/*float: left; <--need to be removed for responsive properties to work*/
 	margin: 0;
 	padding: 1.3em 0 0.53em; /*38px 0 16px; 1em=30px*/
 	
@@ -63,7 +64,6 @@ header h1 span {
 }
 
 header nav {
-	/*float: right;*/
 	padding: 0.875em 0;
 	border-top: 3px solid #77a466; 
 }
@@ -89,25 +89,26 @@ header nav ul li a{
 .top-section,
 .bottom-section {
 	margin: 0 auto;
-	/*clear: both;*/
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 }
 
-.main-image {
+/*.main-image {
 	height: auto;
-	/*float: left;*/
-}
+}*/
+
 .main-image img {
 	width: 100%;
 	border-top: 3px solid #77a466;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
+/*.main-title {
 	height: auto;
-	/*float: left;*/
-}
+}*/
+
 .main-title h2 {
 	text-align: left;
 	padding: 0.313em 0; /*5px 0*/
@@ -122,9 +123,7 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	flex-basis: 33%;
-	height: auto;
-	/*float: left;*/
+	width: 100%;
 	border-top: 1px solid #eee;
 	padding: 0.625em 0;
 }
@@ -135,19 +134,11 @@ header nav ul li a{
 	padding: 0.625em 0; /*10px 0*/
 }
 
-/*.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}*/
-
-/*.section-two h3,
-.section-three h3 {
-	padding: 0.625em 1.875em; /*10px 30px*/
-
 .menu {
 	list-style: none;
 	padding: 0;
 }
+
 .menu li {
 	padding: 0.625em 0; /*10px 0*/
 	color:#77a466;
@@ -157,13 +148,11 @@ header nav ul li a{
 	color: #333;
 	font-size: 1em;
 	line-height: 1.313em; /*21px*/
-	padding: 0;
 }
 
 .address {
 	font-size: 1em;
 	line-height: 1.5em; /*24px*/
-	padding: 0;
 }
 
 /*The widths are in a percentage!*/
@@ -171,7 +160,6 @@ footer {
 	/*height: 50px;*/
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	/*clear: both;*/
 	text-align: center;
 	width: 100%;
 }
@@ -180,4 +168,49 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em; /*14px*/
+}
+
+/*===============================================================================
+---- TABLET STYLES ---- */
+@media all and (min-width: 768px) {
+
+	.bottom-section {
+		flex-flow: row nowrap;
+	}
+
+	.section-one {
+	}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
+	.section-two h3,
+	.section-three h3 {
+		padding: 0 1.875em; /*10px 30px*/
+
+	}	
+	.menu li {
+		padding-right: 1.4em;
+
+	}
+	.reviews,
+	.address {
+		padding: 0 1.4em;
+	}
+}
+
+/*===============================================================================
+---- DESKTOP STYLES ---- */
+@media all and (min-width: 1200px) {
+
+
+
+
+
+
+
+
+
 }
